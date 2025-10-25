@@ -1,0 +1,384 @@
+/* ==== GAYA DASAR ==== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(to right, #6b85d3, #1f3c88);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==== HEADER ==== */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.2em;
+    color: white;
+}
+
+header span {
+    color: #ffd700;
+}
+
+/* ==== HERO SECTION (TEKS + GAMBAR SEJAJAR) ==== */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 80px;
+    gap: 40px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.image-content {
+    flex: 1;
+    text-align: right;
+}
+
+.image-content img {
+    width: 280px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    border: 4px solid #fff;
+}
+
+/* ==== NAVIGASI BULAT ==== */
+nav {
+    text-align: center;
+    margin: 40px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.nav-circle {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #3a07d3;
+    border-radius: 50%;
+    padding: 15px 25px;
+    box-shadow: 0 0 10px #0263b2, 0 0 20px #2f0dab, 0 0 40px #ed6f6f;
+    transition: all 0.3s ease;
+}
+
+.nav-circle:hover {
+    background-color: #59ff00;
+    color: #000;
+    transform: scale(1.15);
+    box-shadow: 0 0 15px #00ff22, 0 0 30px #00ff1a, 0 0 50px #ffd700;
+}
+
+/* ==== FOOTER ==== */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 0.9em;
+}
+
+/* ==== FOTO PROFIL DI TENTANG SAYA ==== */
+.profil-img {
+    width: 200px;         
+    height: auto;         
+    border-radius: 15px; 
+    display: block;
+    margin: 20px auto;     
+    box-shadow: 0 0 20px rgba(0, 183, 255, 0.3);
+    border: 3px solid #fff;
+    object-fit: cover;     
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profil-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+}
+/* ==== HALAMAN TENTANG SAYA ==== */
+section {
+    padding: 40px 80px;
+    line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+    section, .about-section {
+        padding: 25px 20px;
+    }
+}
+
+/* ==== RESPONSIF UNTUK HP ==== */
+@media screen and (max-width: 700px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-content {
+        text-align: center;
+    }
+
+    .image-content img {
+        width: 200px;
+    }
+
+    .nav-circle {
+        display: block;
+        margin: 10px auto;
+        width: 120px;
+    }
+}
+
+/* ====== PORTOFOLIO TABLE ====== */
+.portfolio-table {
+    padding: 40px 80px;
+}
+
+.portfolio-table table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 30, 0.3);
+    color: #fff;
+    box-shadow: 0 0 25px rgba(0, 183, 255, 0.2);
+}
+
+/* Header tabel */
+.portfolio-table thead {
+    background: linear-gradient(90deg, #03ffcd, #91ff00);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.portfolio-table th {
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Isi tabel */
+.portfolio-table td {
+    padding: 15px 18px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    vertical-align: top;
+}
+
+/* Warna bergantian antar baris */
+.portfolio-table tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.portfolio-table tbody tr:nth-child(even) {
+    background-color: rgba(0, 183, 255, 0.05);
+}
+
+/* Efek hover */
+.portfolio-table tbody tr:hover {
+    background-color: rgba(0, 183, 255, 0.15);
+    transform: scale(1.005);
+    transition: all 0.3s ease;
+}
+
+/* Footer tabel */
+.portfolio-table tfoot {
+    background-color: rgba(0, 183, 255, 0.05);
+    font-style: italic;
+    text-align: center;
+}
+
+.footer-text {
+    color: #00ff2fb6;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Efek glow pada tabel */
+.portfolio-table table {
+    box-shadow: 0 0 20px rgba(0, 255, 89, 0.726), 0 0 40px rgba(0, 255, 145, 0.699);
+}
+
+/* ===== RESPONSIVE TABLE ===== */
+@media screen and (max-width: 768px) {
+    .portfolio-table {
+        padding: 20px;
+    }
+
+    .portfolio-table table,
+    .portfolio-table thead,
+    .portfolio-table tbody,
+    .portfolio-table th,
+    .portfolio-table td,
+    .portfolio-table tr {
+        display: block;
+    }
+
+    .portfolio-table tr {
+        margin-bottom: 15px;
+        border: 1px solid rgba(123, 199, 29, 0.703);
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .portfolio-table td {
+        border: none;
+        padding: 8px 10px;
+    }
+
+    .portfolio-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #00ff5e;
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+/* ==== BAGIAN HOBI ==== */
+.hobi-section {
+    padding: 40px 80px;
+    text-align: center;
+}
+
+.hobi-section h2 {
+    color: #91f9c0;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+}
+
+.hobi-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.hobi-table td {
+    width: 33%;
+    padding: 20px;
+    text-align: center;
+    vertical-align: top;
+    border: none;
+}
+
+.hobi-table img {
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 183, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+}
+
+.hobi-table img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00b7ff, 0 0 30px #0078ff;
+}
+
+.hobi-table p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+hobi-section h2 {
+    text-align: center; /* ✅ ini kuncinya */
+    color: #91f9c0;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    margin-top: 40px;
+}
+/* Responsif untuk HP */
+@media screen and (max-width: 768px) {
+    .hobi-table {
+        width: 100%;
+    }
+
+    .hobi-table td {
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+}
+.hobi-table video {
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 183, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobi-table video:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+}
+/* ==== FOOTER ==== */
+footer {
+    background: rgba(0, 0, 0, 0.25);
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
+    font-size: 0.95em;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 15px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    color: #00b7ff;
+    font-size: 1.1em;
+}
+
+.footer-section p {
+    margin: 0;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.footer-section a:hover {
+    color: #00ffcc;
+    text-shadow: 0 0 8px #00ffcc;
+}
+
+.copyright {
+    font-size: 0.85em;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 10px;
+}
+
+/* Responsif untuk HP */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
